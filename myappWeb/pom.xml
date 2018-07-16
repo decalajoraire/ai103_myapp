@@ -14,12 +14,25 @@
   </properties>
   
   <dependencies>
-   
-   <!-- https://mvnrepository.com/artifact/javax.servlet/jstl -->
+  
+  <dependency>
+	<groupId>org.primefaces</groupId>
+	<artifactId>primefaces</artifactId>
+	<version>6.1</version>
+</dependency>
+  
+  <dependency>
+		<groupId>org.apache.myfaces.core</groupId>
+		<artifactId>myfaces-api</artifactId>
+		<version>${org.apache.myfaces.version}</version>
+		<scope>compile</scope>
+	</dependency>
+
 	<dependency>
-    	<groupId>javax.servlet</groupId>
-    	<artifactId>jstl</artifactId>
-    	<version>1.2</version>
+		<groupId>org.apache.myfaces.core</groupId>
+		<artifactId>myfaces-impl</artifactId>
+		<version>${org.apache.myfaces.version}</version>
+		<scope>runtime</scope>
 	</dependency>
    
    
@@ -33,6 +46,14 @@
 	</dependency>
 	
 	<dependency>
+	    <groupId>javax.servlet</groupId>
+	    <artifactId>jstl</artifactId>
+	    <version>1.2</version>
+	</dependency>
+	
+	
+	
+	<dependency>
     	<groupId>com.fasterxml.jackson.core</groupId>
     	<artifactId>jackson-databind</artifactId>    <!-- pour générer du JSON depuis du java et vice versa -->
     	<version>2.9.6</version>
@@ -44,28 +65,16 @@
 	     <groupId>fr.afcepf.ai103</groupId>
   		<artifactId>myappCore</artifactId>
   		 <!--  maven placera dans la partie WEB-INF/lib du .war construit 
-  		       le fichier tpJdbc...jar (projet tpJdbc packagé )-->
+  		       le fichier myappCore...jar (projet myappCore packagé )-->
  		 <version>0.0.1-SNAPSHOT</version>
-	</dependency>
-	
-	<dependency>
-		<groupId>org.apache.myfaces.core</groupId>
-		<artifactId>myfaces-api</artifactId>
-		<version>${org.apache.myfaces.version}</version>
-		<scope>compile</scope>
-	</dependency>
-	<dependency>
-		<groupId>org.apache.myfaces.core</groupId>
-		<artifactId>myfaces-impl</artifactId>
-		<version>${org.apache.myfaces.version}</version>
-		<scope>runtime</scope>
 	</dependency>
   
   </dependencies>
   
   
   <build>
-      <finalName>myappWeb</finalName> <!-- pour construire p1.war -->
+      <finalName>myappWeb</finalName> <!-- pour construire myappWeb.war -->
   </build>
+  
   
 </project>
